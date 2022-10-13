@@ -16,7 +16,7 @@ const StarshipList = (props) => {
   return (
     <>
     {starshipList.map((starship) => 
-      <div key={starship.name}>{starship.name}</div>
+      <Link to='/starship' key={starship.name}>{starship.name}</Link>
     )}
     </>
   )
