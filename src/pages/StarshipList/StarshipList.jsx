@@ -15,11 +15,17 @@ const StarshipList = (props) => {
 
   return (
     <>
+    {starshipList.length ?
+    <>
     {starshipList.map((starship) => 
       <div>
-      <Link to='/starship' state={{starship}} key={starship.name}>{starship.name}</Link>
+        <Link to='/starship' state={{starship}} key={starship.name}>{starship.name}</Link>
       </div>
     )}
+    </>
+    :
+    <div>I'm loading here!</div>
+    }
     </>
   )
 }

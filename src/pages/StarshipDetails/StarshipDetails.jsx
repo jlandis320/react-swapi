@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 
 const StarshipDetails = (props) => {
@@ -6,8 +6,9 @@ const StarshipDetails = (props) => {
 
   return ( 
     <div>
-    <h3>Hello, my name is: {location.state.starship.name}</h3>
-    <h3>I'm a {location.state.starship.model}!</h3>
+      <h2>Hello, my name is: {location.state.starship.name}</h2>
+      <h3>I'm a {location.state.starship.model}!</h3>
+      <Link to='/starship-list'>Back to All Starships</Link>
     </div>
   );
 }
