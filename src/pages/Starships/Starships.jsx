@@ -16,7 +16,7 @@ const StarshipList = (props) => {
   return (
     <>
     {starshipList.map((starship) => 
-      <div>{starship.name}</div>
+      <div key={starship.name}>{starship.name}</div>
     )}
     </>
   )
